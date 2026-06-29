@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Proyecto Back NodeJS</title>
+    <link rel="stylesheet" href="hojas_de_estilo/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Bienvenido a mi página</h1>
+      </header>
+
+      <section class="card">
+        <h2>Interacción</h2>
+        <p><a href="http://localhost:3000/api/products">Modo solo Backend</a></p>
+        <p>Haz clic en el botón para ejecutar la lógica </p>
+        <button id="btn">Ver Productos</button>
+      </section>
+      <ul id="products"></ul>
+      <button id="btn_agregar">Agregar Producto</button>
+      <div id="formulario" ">
+        <button id="btn_eliminar">Eliminar Producto</button>
+        <input type="text" id="input_id" placeholder="Ingrese el ID del producto a eliminar" />
+      </div>
+      </div>
+    </main>
+
+    <script src="Logica/main.js"></script>
+  </body>
+</html>

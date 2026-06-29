@@ -78,3 +78,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
+#formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#btn_eliminar{
+  background: #ff4d4d;
+  align-items: center;
+}
+#input_id{
+  width: 100%
+}
