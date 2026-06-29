@@ -4,32 +4,33 @@ import { collection, addDoc } from "firebase/firestore";
 const productsCollection = collection(db, 'products');
 
 const products = [
-    {
-        name: 'Producto 1',
+    { 
         price: 10.99,
         description: 'Descripción del producto 1',
-        stock: 100
+        stock: 100,
+        name: 'Producto 1'
     },  
     {
-        name: 'Producto 2',
         price: 19.99,
         description: 'Descripción del producto 2',
-        stock: 50
+        stock: 50,
+        name: 'Producto 2'
     },  
     {
-        name: 'Producto 3',
+        
         price: 5.99,
         description: 'Descripción del producto 3',
-        stock: 200
+        stock: 200,
+        name: 'Producto 3'
     }
 ];
 
 
-const createProducts = async () => {
+const createProducts_Seed = async () => {
     for (const product of products) {
         await addDoc(productsCollection, product);
         console.log("Producto agregado:", product.name);
     }
 };
 
-createProducts();
+createProducts_Seed();

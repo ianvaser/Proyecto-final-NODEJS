@@ -10,10 +10,10 @@ export const getProductById = async(id) => {
 };
 
 export const createProduct = async (productData) => {
-    const {name, price, description} = productData;
-    return productService.saveProducts(name, price, description);
+    const {description,name,price,stock} = productData;
+    return productService.saveProducts({description,name,price, stock});
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProduct = async(id) => {
     return productService.deleteProduct(id);
 }

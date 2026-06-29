@@ -24,9 +24,12 @@ export async function getAllProducts() {
 };
 
 export async function saveProducts(product) {
+    
     await addDoc(productsCollection,product); 
     };
 
 export async function deleteProduct(id) {
-    await deleteDoc(doc(productsCollection,id));
-}
+
+    const productDoc = doc(db,"products",id);
+            await deleteDoc(productDoc);
+};
